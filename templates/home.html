@@ -1,0 +1,113 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    *{
+    box-sizing: border-box;
+    }
+
+    input[type=text], select, textarea {
+      width: 50%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: #44a049;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 50%;
+        margin-top: 0;
+      }
+    }
+    body{
+      background-color:#6e6969;
+      text-align:center;
+    }
+    body.form_wrapper{
+      display:inline-block;
+      background-color: #fff;
+      border-radius: 5px;
+      height: auto;
+      padding: 15px 18px;
+      margin: 10% auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    </style>
+</head>
+<body style="background:black">
+<h1 style="color:pink; text-align:center;">Feature Selection</h1>
+<div class="container">
+    <form action="/rpp_Calculator" method="post">
+
+        <input type="checkbox" name="feature" value="Univ_Business_Number" checked>
+        <label for="Univ_Business_Number"> Univ_Business_Number</label><br>
+
+        <input type="checkbox" name="feature" value="Business_Name" checked>
+        <label for="Business_Name"> Business_Name</label><br>
+
+        <input type="checkbox" name="feature" value="Alternate_Name" >
+        <label for="Alternate_Name"> Alternate_Name</label><br>
+
+        <input type="checkbox" name="feature" value="Inception_Date">
+        <label for="Inception_Date"> Inception_Date</label><br><br>
+
+        <input type="checkbox" name="feature" value="Phone_Number">
+        <label for="Phone_Number"> Phone_Number</label><br>
+
+        <input type="checkbox" name="feature" value="Address">
+        <label for="Address"> Address</label><br>
+
+        <div class="row">
+            <input type="submit" value="Calculate RPP">
+        </div>
+    </form>
+</div>
+</body>
+</html>
